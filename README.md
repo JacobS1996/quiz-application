@@ -11,6 +11,22 @@
 
 # How to Build
 
+  <h2>Getting Started</h2>
+
+
+  <h2>Create the Database</h2>
+
+  <h3>Initializing the Database</h3>
+  <h3>Creating the Tables</h3>
+  <h3>Creating Stored Procedures</h3>
+  <h3>Connecting the Database to the Application</h3>
+
+  <h2>Wire Up Dependancies</h2>
+
+  <h3>Internal Connections</h3>
+  <h3>Third-Party Packages</h3>
+
+
 # Contribution
 
   I created this project with the intent of practicing and showcasing my software skills and without the intention of collaboration. That being said, I appreciate and am thankful for any interest in this repository that contributors might have. If you are interested in contributing to this repository, please reach out to me directly or create a pull request. I cannot guarantee that I will approve of every request, but I will certainly take them into consideration. If you do contribute directly to this repository, I will make every effort to list you as a contributor in the credits section of this README.md. 
@@ -26,10 +42,10 @@
 # Credits
 
 <h2>Third Party Software Package Attribution</h2>
------------------------------------------------
+---------------------------------------------------------------------------------------------------
 
-This application makes use of software packages which are under their own separate license agreements and copyright information. In keeping with the terms of
-these license agreements, the packages are listed below along with their respective copyright information, license agreements, and repository links. To install these packages, use the links provided, or find them using the NuGet Package Manager built into Visual Studio. Please note that the packages listed below may contain their own dependancies, each with their own licensing terms and conditions.
+This application makes use of software packages which are under their own separate license agreements and copyright information. The following packages are not committed to this repository but are necessary installations to properly build the application. In keeping with the terms of these license agreements, the packages are listed below along with their respective copyright information, license agreements, and repository links. To install these packages, use the links provided, or find them using the NuGet Package Manager built into Visual Studio. Please note that the packages listed below may contain their own dependancies, each with their own licensing terms and conditions. In no way do I intend to claim ownership over work that is not mine. If I have failed to give proper attribution and/or have not properly complied with a license agreement, please reach out to me through my contact information listed on GitHub.
+
 
 Dapper 2.1.35 Copyright (c) Stack Exchange, Inc.
 
@@ -58,6 +74,11 @@ Licensed under the MIT License which can be found at https://github.com/dotnet/r
 Link to NuGet Package: https://www.nuget.org/packages/System.Configuration.ConfigurationManager/9.0.0#readme-body-tab
 
 Link to GitHub repository: https://github.com/dotnet/runtime
+
+
+
+
+
 
 
 
