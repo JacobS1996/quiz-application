@@ -13,7 +13,7 @@
 
   <h2>Getting Started</h2>
 
-  Submit a pull request on a branch other than the main in order to access the source code. Open the solution file in Visual Studio 2022. This should automatically open all relevant files for this project. 
+  Submit a pull request on a branch other than the main in order to access the source code. Open the solution file in Visual Studio 2022. This should automatically open all relevant files for this project. Make sure to set up "MockQuiz" as the startup project.
 
   <h2>Create the Database</h2>
 
@@ -27,10 +27,13 @@
 
   <h2>Wire Up Dependancies</h2>
 
-  
+  If not automatically included, install the third-party packages into the "MockQuizLibrary" dependancies using NuGet Package manager. The third-party packages are detailed in the Credits section of this READMe.md as well as in the Credits.txt files contained in this repository.
 
-  <h3>Internal Connections</h3>
-  <h3>Third-Party Packages</h3>
+  Right click on the "MockQuiz" project dependancies and add the "MockQuizLibrary" as a reference. 
+
+  <h3>Conclusion</h3>
+
+  After completing these steps, the application should build successfully. If the program does not run after following these steps, please reach out to me so that I can resolve the issue and amend this section of the READMe.md. 
 
 
 # Contribution
