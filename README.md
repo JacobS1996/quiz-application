@@ -13,15 +13,21 @@
 
   <h2>Getting Started</h2>
 
+  Submit a pull request on a branch other than the main in order to access the source code. Open the solution file in Visual Studio 2022. This should automatically open all relevant files for this project. 
 
   <h2>Create the Database</h2>
 
-  <h3>Initializing the Database</h3>
-  <h3>Creating the Tables</h3>
-  <h3>Creating Stored Procedures</h3>
+  This repository contains two ways of creating the database. You can publish it to your sql database management system of choice by right clicking on the "MockQuizDatabase" project and selecting publish. Alternatively, you can find queries to create the database and its tables under the Queries Folder. To create the stored procedures referenced in this application, run the queries contained in the Stored Procedures folder under Queries. Ensure that you are running them for the previously created database. 
+
   <h3>Connecting the Database to the Application</h3>
 
+  To connect the database to the application, use the App.config.template file. Insert your database name as well as your unique connection string. Rename the file by removing the .template portion of the file name.
+
+  Under the MockQuiz project file, right click on the Dashboard file to access the code-behind. There, change the content of the databaseName variable to match your database name from the app.config file. 
+
   <h2>Wire Up Dependancies</h2>
+
+  
 
   <h3>Internal Connections</h3>
   <h3>Third-Party Packages</h3>
