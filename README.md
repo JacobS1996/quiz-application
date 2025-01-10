@@ -11,21 +11,21 @@
 
 # How to Build
 
-  <h2>Getting Started</h2>
+  <h3>Getting Started</h3>
 
-  Submit a pull request on a branch other than the main in order to access the source code. Open the solution file in Visual Studio 2022. This should automatically open all relevant files for this project. Make sure to set up "MockQuiz" as the startup project.
+  Ensure that Visual Studio is installed on your machiine. Submit a pull request in order to access this project's source code. Once you have access to the files, open the solution file (.sln) in Visual Studio 2022. This should automatically open all of the relevant files for this project. Make sure to set up "MockQuiz" as the startup project. To do this, right click on the "MockQuiz" project in Solution Explorer and select "set as startup project."
 
-  <h2>Create the Database</h2>
+  <h3>Create the Database</h3>
 
   This repository contains two ways of creating the database. You can publish it to your sql database management system of choice by right clicking on the "MockQuizDatabase" project and selecting publish. Alternatively, you can find queries to create the database and its tables under the Queries Folder. To create the stored procedures referenced in this application, run the queries contained in the Stored Procedures folder under Queries. Ensure that you are running them for the previously created database. 
 
   <h3>Connecting the Database to the Application</h3>
 
-  To connect the database to the application, use the App.config.template file. Insert your database name as well as your unique connection string. Rename the file by removing the .template portion of the file name.
+  To connect the database to the application, use the App.config.template file. Insert your database name as well as your unique connection string. Rename the file by removing the .template portion of the file name. 
 
-  Under the MockQuiz project file, right click on the Dashboard file to access the code-behind. There, change the content of the databaseName variable to match your database name from the app.config file. 
+  Under the MockQuiz project file, right click on the Dashboard file and select "view code" to access the code-behind. There, change the content of the databaseName variable to match your database name from the app.config file. 
 
-  <h2>Wire Up Dependancies</h2>
+  <h3>Wire Up Dependancies</h3>
 
   If not automatically included, install the third-party packages into the "MockQuizLibrary" dependancies using NuGet Package manager. The third-party packages are detailed in the Credits section of this READMe.md as well as in the Credits.txt files contained in this repository.
 
