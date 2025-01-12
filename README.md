@@ -13,7 +13,9 @@
 
   <h3>Getting Started</h3>
 
-  Ensure that Visual Studio is installed on your machiine. Submit a pull request in order to access this project's source code. Once you have access to the files, open the solution file (.sln) in Visual Studio 2022. This should automatically open all of the relevant files for this project. Make sure to set up "MockQuiz" as the startup project. To do this, right click on the "MockQuiz" project in Solution Explorer and select "set as startup project."
+  Ensure that Visual Studio is installed on your machine and that your GitHub account is connected. If you only wish to view the source code/build the project, you can clone the repo and open it from Visual Studio using the "Code" drop down button. Doing this, however, will prevent you from pushing any changes back to the repository. If you wish to contribute, you will need to fork the repository, make your changes on the development branch, and submit a pull request.
+  
+  Once you have access to the files, open the solution file (.sln) in Visual Studio 2022. This should automatically open all of the relevant files for this project. Make sure to set up "MockQuiz" as the startup project. To do this, right click on the "MockQuiz" project in Solution Explorer and select "set as startup project."
 
   <h3>Create the Database</h3>
 
