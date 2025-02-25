@@ -2,6 +2,6 @@
 <configuration>
 
 	<connectionStrings>
-		<add name ="Insert database name" connectionString="Insert connection string"/>
+		<add name ="insert database name" connectionString="insert connection string"/>
 	</connectionStrings>
 </configuration>

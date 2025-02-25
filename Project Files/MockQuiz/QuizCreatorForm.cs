@@ -29,7 +29,7 @@ namespace MockQuiz
           Please see the Credits.txt file for the copyright information, licensing agreements, and links in compliance with these packages' licensing agreements. */
 
             DataAccess dataAccess = new DataAccess();
-            bool quizTitleIsValid = (dataAccess.FindQuizByTitle(this.quizTitleTextbox.Text, Dashboard.databaseName).Count < 1) && !quizTitleTextbox.Text.IsNullOrEmpty();
+            bool quizTitleIsValid = (dataAccess.FindQuizByTitle(this.quizTitleTextbox.Text, Dashboard.databaseName).Count < 1) && !string.IsNullOrWhiteSpace(quizTitleTextbox.Text);
             bool questionNumberIsInt = int.TryParse(questionCountTextbox.Text, out int questionNumber);   
             bool percentageIsInt = int.TryParse(this.passingPercentageTextbox.Text, out int percentageToInt);
             bool percentageIsValid = percentageIsInt && percentageToInt >= 0 && percentageToInt <= 100;
