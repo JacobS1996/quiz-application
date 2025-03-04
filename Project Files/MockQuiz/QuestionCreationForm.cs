@@ -24,8 +24,8 @@ namespace MockQuiz
 
         private void submitQuestionInfoButton_Click(object sender, EventArgs e)
         {
-            if (questionTextBox.Text.IsNullOrEmpty() || firstAnswerTextBox.Text.IsNullOrEmpty() || secondAnswerTextbox.Text.IsNullOrEmpty()
-                || thirdAnswerTextbox.Text.IsNullOrEmpty() || fourthAnswerTextbox.Text.IsNullOrEmpty())
+            if (string.IsNullOrWhiteSpace(questionTextBox.Text) || string.IsNullOrWhiteSpace(firstAnswerTextBox.Text)|| string.IsNullOrWhiteSpace(secondAnswerTextbox.Text)
+                || string.IsNullOrWhiteSpace(thirdAnswerTextbox.Text) || string.IsNullOrWhiteSpace(fourthAnswerTextbox.Text))
             {
                 MessageBox.Show("The question box and answer boxes cannot be blank.", "invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

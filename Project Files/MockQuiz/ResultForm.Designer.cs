@@ -69,7 +69,7 @@
             // passFailLabel
             // 
             passFailLabel.AutoSize = true;
-            passFailLabel.Location = new Point(562, 105);
+            passFailLabel.Location = new Point(637, 114);
             passFailLabel.Name = "passFailLabel";
             passFailLabel.Size = new Size(239, 38);
             passFailLabel.TabIndex = 3;
