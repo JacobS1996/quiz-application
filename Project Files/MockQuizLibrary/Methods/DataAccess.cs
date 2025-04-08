@@ -106,7 +106,32 @@ namespace MockQuizLibrary.Methods
                 return connection.Query<QuizModel>("SELECT dbo.Quizzes.QuizTitle, dbo.Quizzes.PercentageRequiredToPass FROM dbo.Quizzes;").ToList();
             }
         }
-        
+
+        public void DeleteQuiz(string databaseName, int quizIdParameter)
+        {
+            using (IDbConnection connection = new SqlConnection(ConnectionStringGetter.GetConnectionString(databaseName)))
+            {
+                connection.Execute("dbo.spDeleteQuizById @quizId", new { quizId = quizIdParameter });
+            }
+        }
+
+
+        public void DeleteQuizQuestions(string databaseName, int quizIdParameter)
+        {
+            using (IDbConnection connection = new SqlConnection(ConnectionStringGetter.GetConnectionString(databaseName)))
+            {
+                connection.Execute("dbo.spDeleteQuestionsByQuizId @quizId", new { quizId = quizIdParameter });
+            }
+        }
+
+        public void DeleteQuestionAnswers(string databaseName, int questionIdParameter)
+        {
+            using (IDbConnection connection = new SqlConnection(ConnectionStringGetter.GetConnectionString(databaseName)))
+            {
+                connection.Execute("dbo.spDeleteAnswersByQuestionId @questionId", new { questionId = questionIdParameter });
+            }
+        }
+
 
 
     }

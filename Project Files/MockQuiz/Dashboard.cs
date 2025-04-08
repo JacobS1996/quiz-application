@@ -24,31 +24,31 @@ namespace MockQuiz
         internal static string databaseName = ""; // change this to match your database name
 
 
-        
+
         internal static QuizModel quiz = new QuizModel();
-        
+
         public Dashboard()
         {
             InitializeComponent();
             DisplayQuizzes();
-            
+
         }
 
         private void CycleQuestions()
         {
-            
+
             this.Hide();
             foreach (QuestionModel question in quiz.Questions)
             {
-               
+
                 int questionId = dataAccess.GetQuestionId(question, dataAccess.GetQuizId(quiz, databaseName), databaseName);
                 question.Answers = dataAccess.GetAnswersByQuestionId(questionId, databaseName);
                 QuestionForm questionForm = new QuestionForm();
                 questionForm.currentQuestion.QuestionNumber = question.QuestionNumber;
                 questionForm.currentQuestion.QuestionText = question.QuestionText;
                 questionForm.currentQuestion.Answers = question.Answers;
-               
-                if(question.QuestionNumber == quiz.Questions.Count)
+
+                if (question.QuestionNumber == quiz.Questions.Count)
                 {
                     questionForm.UpdateButtonText();
                 }
@@ -86,14 +86,14 @@ namespace MockQuiz
 
             quizListBox.DataSource = quizzes;
             quizListBox.DisplayMember = "QuizTitle";
-           
-           
+
+
         }
 
         private void selectQuizButton_Click(object sender, EventArgs e)
         {
             quiz = new QuizModel();
-            if(quizListBox.SelectedItem != null)
+            if (quizListBox.SelectedItem != null)
             {
                 foreach (QuizModel item in quizzes)
                 {
@@ -108,7 +108,7 @@ namespace MockQuiz
                             CycleQuestions();
                             DisplayResultPage();
 
-                        }                    
+                        }
                     }
                 }
             }
@@ -116,9 +116,42 @@ namespace MockQuiz
             {
                 MessageBox.Show("No quiz selected.", "null selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
 
-            
+
+
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            quiz = new QuizModel();
+
+            if (quizListBox.SelectedItem != null)
+            {
+                foreach (QuizModel item in quizzes)
+                {
+                    if (item == quizListBox.SelectedItem)
+                    {
+                        if (item.QuizTitle != null)
+                        {
+                            int quizId = dataAccess.GetQuizId(item, databaseName);
+                            List<QuestionModel> quizQuestions = dataAccess.GetQuestionsByQuizTitle(item.QuizTitle, databaseName); 
+                            foreach(QuestionModel question in quizQuestions)
+                            {
+                                int questionId = dataAccess.GetQuestionId(question, quizId, databaseName);
+                                dataAccess.DeleteQuestionAnswers(databaseName, questionId);
+                            }
+                            dataAccess.DeleteQuizQuestions(databaseName, quizId);
+                            dataAccess.DeleteQuiz(databaseName, quizId);
+                            DisplayQuizzes();
+
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No quiz selected.", "null selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
