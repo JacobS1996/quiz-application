@@ -32,6 +32,7 @@
             quizListBox = new ListBox();
             quizAppLabel = new Label();
             createQuizButton = new Button();
+            deleteButton = new Button();
             SuspendLayout();
             // 
             // selectQuizButton
@@ -77,11 +78,22 @@
             createQuizButton.UseVisualStyleBackColor = true;
             createQuizButton.Click += createQuizButton_Click;
             // 
+            // deleteButton
+            // 
+            deleteButton.Location = new Point(742, 457);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(153, 45);
+            deleteButton.TabIndex = 4;
+            deleteButton.Text = "Delete Quiz";
+            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(13F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1300, 697);
+            Controls.Add(deleteButton);
             Controls.Add(createQuizButton);
             Controls.Add(quizAppLabel);
             Controls.Add(quizListBox);
@@ -101,5 +113,6 @@
         private ListBox quizListBox;
         private Label quizAppLabel;
         private Button createQuizButton;
+        private Button deleteButton;
     }
 }
